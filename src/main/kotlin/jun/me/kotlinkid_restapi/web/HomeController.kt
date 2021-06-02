@@ -7,5 +7,5 @@ import org.springframework.web.bind.annotation.RestController
 @RestController
 class HomeController {
     @RequestMapping(value = ["/"],method = [RequestMethod.GET])
-    fun index(): String = "Hello Srping"
+    fun index(): String = "Hello Spring"
 }

@@ -20,7 +20,7 @@ tasks.withType<Test> {
     useJUnitPlatform()
 }
 
-val kotestVersion = "4.1.2"
+val kotestVersion = "4.6.0"
 
 dependencies {
     implementation ("com.h2database:h2")
@@ -32,7 +32,7 @@ dependencies {
 
     testImplementation ("io.kotest:kotest-runner-junit5:$kotestVersion")
     testImplementation ("io.kotest:kotest-assertions-core:$kotestVersion")
-    testImplementation ("io.kotest:kotest-property:$kotestVersion")
+    testImplementation ("io.kotest:kotest-extensions-spring:4.3.2")
     testImplementation("org.springframework.boot:spring-boot-starter-test")
 }
 
