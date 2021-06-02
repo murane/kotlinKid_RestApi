@@ -2,10 +2,9 @@ package jun.me.kotlinkid_restapi
 
 import io.kotest.core.listeners.TestListener
 import io.kotest.core.spec.style.FunSpec
-import io.kotest.core.test.TestCase.Companion.test
 import io.kotest.matchers.shouldBe
 import io.kotest.spring.SpringListener
-import jun.me.kotlinkid_restapi.web.HomeController
+import jun.me.kotlinkid_restapi.web.HelloController
 import org.springframework.beans.factory.annotation.Autowired
 import org.springframework.boot.test.context.SpringBootTest
 
@@ -17,11 +16,11 @@ class HomeControllerTest : FunSpec() {
     }
 
     @Autowired
-    private lateinit var homeControllerTest: HomeController
+    private lateinit var helloController: HelloController
 
     init {
         test("home controller test"){
-            homeControllerTest.index() shouldBe "Hello Spring"
+            helloController.index() shouldBe "Hello Spring!"
         }
     }
 }
